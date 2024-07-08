@@ -5,8 +5,12 @@
  * @format
  */
 
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import RootStackNavigation from './src/navigations/RootStackNavigation';
+
 
 
 
@@ -15,9 +19,11 @@ function App(): React.JSX.Element {
 
 
   return (
-   <View>
-    <Text>hello nonabang</Text>
-   </View>
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <RootStackNavigation/>
+      </NavigationContainer>
+   </SafeAreaProvider>
   );
 }
 
