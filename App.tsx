@@ -16,7 +16,7 @@ function App(): React.JSX.Element {
 
   return (
    <View>
-    <Text>hello</Text>
+    <Text>hello nonabang</Text>
    </View>
   );
 }
