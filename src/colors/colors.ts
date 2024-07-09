@@ -1,5 +1,6 @@
 export const COLOR = {
     MAIN_ORANGE: "#FE8C12",
 
-    BUTTON_BLACK: "#282A29"
+    BUTTON_BLACK: "#282A29",
+    BORDERSHADOW_BLACK: "#AAAAAA"
 }
