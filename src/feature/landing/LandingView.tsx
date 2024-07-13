@@ -23,7 +23,7 @@ export const LandingView = () => {
                 <Margin height={50}/>
                     <LottieView 
                         ref={animationRef}
-                        source={require("/Users/kjm/Projects/nona/nonabang_app_front/nonabangAppFront/src/assets/lottie/logoLottie.json")}
+                        source={require("../../assets/lottie/logoLottie.json")}
                         style={{width:"150%", height:"130%",alignSelf:"center",marginTop:-150}}
                         autoPlay
                         loop/>
