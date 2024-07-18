@@ -56,7 +56,7 @@ export const LoginButton = ({
         borderColor: COLOR.BORDERSHADOW_BLACK,
         backgroundColor: title == "구글" ? "white" : title == "네이버" ? "yellow" : COLOR.BUTTON_BLACK,
       }}
-        onPress={() => { login(title) }}
+        onPress={onPressLogButton}
       >
         <Text style={{
           color: title == "노나방으" ? "white" : COLOR.BUTTON_BLACK,
