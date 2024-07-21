@@ -1,6 +1,6 @@
 import { Animated, Image, Pressable, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native"
-import { SocialLoginGoogle } from "./../sociallogin/SocialLoginGoogle"
-import { SocialLoginNaver } from "./../sociallogin/SocialLoginNaver"
+import { SocialLoginGoogle } from "../sociallogin/SocialLoginGoogle"
+import { SocialLoginNaver } from "../sociallogin/SocialLoginNaver"
 import Icon from 'react-native-vector-icons/Ionicons'
 import { useNavigation } from "@react-navigation/native"
 import { COLOR } from "../../../colors/colors"
@@ -11,14 +11,14 @@ type props = {
     handlePresentModalPress: () => void,
     isExpanded: any
 }
-export const BackDropView = ({
+export const SigninBackDropView = ({
     handlePresentModalPress,
     isExpanded
 }: props) => {
     const [id, setId] = useState('')
     const [pw, setPw] = useState('')
     const [isVisible, setIsVisible] = useState(false);
-    const navigation = useNavigation()
+    const navigation = useNavigation<any>()
     const interpolate = useRef(new Animated.Value(0)).current
     const onPressNoNaAimButton = () => {
         Animated.timing(interpolate, {
@@ -67,7 +67,7 @@ export const BackDropView = ({
                         placeholder="pw를 입력해주세요"
                         onChangeText={(text) => { setPw(text) }}
                     />
-                    <Pressable>
+                    <Pressable onPress={()=>{navigation.navigate("Main")}}>
                         <Text>메인페이지 이동</Text>
                     </Pressable>
                 </Animated.View>

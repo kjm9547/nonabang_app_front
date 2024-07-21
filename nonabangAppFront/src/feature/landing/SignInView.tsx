@@ -10,7 +10,7 @@ import BottomSheet, {
     BottomSheetModalProvider,
 } from '@gorhom/bottom-sheet';
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { BackDropView } from "./bottommodal/BackDropView";
+import { SigninBackDropView } from "./bottommodal/SigninBackDropView";
 import { ModalSignUpView } from "./bottommodal/ModalSignUpView";
 export const SignInView = () => {
     const [isExpanded, setIsExpanded] = useState(false);//필름뷰의 투명도 조절 모달이 올라온 경우 뒤에 필름 씌우기
@@ -64,7 +64,7 @@ export const SignInView = () => {
                     backgroundStyle={{ backgroundColor: COLOR.BACKGROUND_WHITE_DOWN }}
                     backdropComponent={() => {
                         return (
-                            <BackDropView
+                            <SigninBackDropView
                                 handlePresentModalPress={handlePresentModalPress}
                                 isExpanded={isExpanded}
                             />)
