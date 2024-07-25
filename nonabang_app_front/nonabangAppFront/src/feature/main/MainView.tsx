@@ -9,7 +9,7 @@ export const MainView = () => {
     const onPressCard = (text:string) =>{
         if(text == "룸메 찾기") {
             console.log(1)
-            // navigation.navigate("AddRoomPage")
+            navigation.navigate('MainStack',{screen:'SearchMate'})
         }
         else if(text == "방 등록") {
             console.log(2)

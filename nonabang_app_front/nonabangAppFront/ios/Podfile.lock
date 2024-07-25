@@ -45,6 +45,9 @@ PODS:
     - ReactCommon/turbomodule/core
     - Yoga
   - naveridlogin-sdk-ios (4.2.1)
+  - NMapsGeometry (1.0.2)
+  - NMapsMap (3.18.1):
+    - NMapsGeometry
   - RCT-Folly (2024.01.01.00):
     - boost
     - DoubleConversion
@@ -973,6 +976,9 @@ PODS:
   - React-Mapbuffer (0.74.3):
     - glog
     - React-debug
+  - react-native-nmap (0.0.67):
+    - NMapsMap
+    - React
   - react-native-safe-area-context (4.10.8):
     - React-Core
   - React-nativeconfig (0.74.3)
@@ -1351,6 +1357,7 @@ DEPENDENCIES:
   - React-jsitracing (from `../node_modules/react-native/ReactCommon/hermes/executor/`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - React-Mapbuffer (from `../node_modules/react-native/ReactCommon`)
+  - react-native-nmap (from `../node_modules/react-native-nmap`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - React-nativeconfig (from `../node_modules/react-native/ReactCommon`)
   - React-NativeModulesApple (from `../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
@@ -1391,6 +1398,8 @@ SPEC REPOS:
     - GTMSessionFetcher
     - lottie-ios
     - naveridlogin-sdk-ios
+    - NMapsGeometry
+    - NMapsMap
     - SocketRocket
 
 EXTERNAL SOURCES:
@@ -1457,6 +1466,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/logger"
   React-Mapbuffer:
     :path: "../node_modules/react-native/ReactCommon"
+  react-native-nmap:
+    :path: "../node_modules/react-native-nmap"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
   React-nativeconfig:
@@ -1534,6 +1545,8 @@ SPEC CHECKSUMS:
   lottie-ios: e047b1d2e6239b787cc5e9755b988869cf190494
   lottie-react-native: 4279da8b681e89c29a2adb9f99985d6cf372d49d
   naveridlogin-sdk-ios: d5f9d92905a7e964976ebfdd665bee5fb75845c5
+  NMapsGeometry: 4e02554fa9880ef02ed96b075dc84355d6352479
+  NMapsMap: e879088eeee2d1e3b97f0a609076e1824dce2cad
   RCT-Folly: 02617c592a293bd6d418e0a88ff4ee1f88329b47
   RCTDeprecation: 4c7eeb42be0b2e95195563c49be08d0b839d22b4
   RCTRequired: d530a0f489699c8500e944fde963102c42dcd0c2
@@ -1558,6 +1571,7 @@ SPEC CHECKSUMS:
   React-jsitracing: 6b3c8c98313642140530f93c46f5a6ca4530b446
   React-logger: fa92ba4d3a5d39ac450f59be2a3cec7b099f0304
   React-Mapbuffer: 9f68550e7c6839d01411ac8896aea5c868eff63a
+  react-native-nmap: 057c4e7b1b765b234ab4b0a6c5ccd9baaf3bc9c7
   react-native-safe-area-context: b7daa1a8df36095a032dff095a1ea8963cb48371
   React-nativeconfig: fa5de9d8f4dbd5917358f8ad3ad1e08762f01dcb
   React-NativeModulesApple: 585d1b78e0597de364d259cb56007052d0bda5e5

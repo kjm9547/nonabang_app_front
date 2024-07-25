@@ -67,7 +67,7 @@ export const SigninBackDropView = ({
                         placeholder="pw를 입력해주세요"
                         onChangeText={(text) => { setPw(text) }}
                     />
-                    <Pressable onPress={()=>{navigation.navigate("Main")}}>
+                    <Pressable onPress={()=>{navigation.navigate('MainStack',{screen:'Main'})}}>
                         <Text>메인페이지 이동</Text>
                     </Pressable>
                 </Animated.View>
