@@ -1,3 +1,4 @@
+import LottieView from "lottie-react-native"
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native"
 
 type props ={
@@ -26,6 +27,12 @@ export const TouchableCard = ({
         }}
         onPress={()=>{onPressCard(title)}}
         >
+             <LottieView
+                    source={require("../assets/lottie/mapLottie.json")}
+                    autoPlay
+                    resizeMode="cover"
+                    style={{ alignSelf: "center",width:"100%", height:"100%",borderWidth:1,borderRadius:500,backgroundColor:'red' }}
+                />
             <Text>{title}</Text>
         </TouchableOpacity>
 
