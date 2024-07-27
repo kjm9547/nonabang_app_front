@@ -5,13 +5,14 @@ import { UserProfileCard } from "../userprofile/UserProfileCard"
 import { COLOR } from "../../colors/colors"
 import { MainBodyTop } from "./MainBodyTop"
 import { MainBodyMiddle } from "./MainBodyMiddle"
+import { MainBodybottom } from "./MainBodyBottom"
 
 export const MainView = () => {
     const navigation = useNavigation<any>()
-    const keyword = ["룸메 찾기", "방 등록", "찜한 방", "커뮤니티"]
+    const keyword = ["룸메찾기", "방 등록", "찜한 방", "커뮤니티"]
     const iconKeyword = []
     const onPressCard = (text: string) => {
-        if (text == "룸메 찾기") {
+        if (text == "룸메찾기") {
             console.log(1)
             navigation.navigate('MainStack', { screen: 'SearchMate' })
         }
@@ -49,14 +50,15 @@ export const MainView = () => {
                 <View style={{flex:0.94,}}>
                     <View style={{flex:0.4,}}>
                         {/* body top */}
-                        <MainBodyTop/>
+                        <MainBodyTop onPressCard={onPressCard}/>
                     </View>
-                    <View style={{flex:0.3,borderWidth:1}}>
+                    <View style={{flex:0.3}}>
                         {/* body middle */}
                         <MainBodyMiddle/>
                     </View>
-                    <View style={{flex:0.3,borderWidth:1}}>
+                    <View style={{flex:0.3}}>
                         {/* body bottom */}
+                        <MainBodybottom/>
                     </View>
                 </View>
                     

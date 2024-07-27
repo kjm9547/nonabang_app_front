@@ -1,11 +1,11 @@
 import LottieView from "lottie-react-native"
-import { Image, StyleSheet, Text, View } from "react-native"
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native"
 import { COLOR } from "../../colors/colors"
 
-export const MainBodyTop = () => {
-
+export const MainBodyTop = ({onPressCard}:any) => {
+    
     const BackView = ({text}:any) => {
-        console.log(text)
+        
         if(text == "룸메찾기"){
             return(
                 <>
@@ -32,7 +32,8 @@ export const MainBodyTop = () => {
                 <LottieView 
                     autoPlay
                     style={{zIndex:1,width:150,height:120,position:"absolute",top:25,left:15}}
-                source={require("../../assets/lottie/lottieRegister.json")}/>
+                    speed={0.6}
+                    source={require("../../assets/lottie/lottieRegister.json")}/>
                 </>
             )
         }
@@ -41,10 +42,13 @@ export const MainBodyTop = () => {
         title
     }: any) => {
         return (
-            <View style={styles.touchableCard}>
+            <TouchableOpacity 
+                style={styles.touchableCard}
+                onPress={()=>{onPressCard("룸메찾기")}}
+                >
                <BackView text={title}/>
                     <Text style={{top:150,fontSize:18,fontWeight:"bold"}}>{title}</Text>
-            </View>
+            </TouchableOpacity>
         )
     }
     return (
@@ -64,13 +68,13 @@ const styles = StyleSheet.create({
         justifyContent: "center"
     },
     touchableCard: {
-        borderWidth: 0.4,
-        borderColor:COLOR.BORDERSHADOW_BLACK,
+        borderWidth: 0.6,
+        borderColor:COLOR.BORDERSHADOW_BLACKLIGHT,
         flex: 0.5,
         borderRadius: 25,
         marginRight: 10,
         height: "80%",
         alignItems:"center",
-        backgroundColor:COLOR.CARDBACKGROUND
+        backgroundColor:COLOR.CARDBACKGROUND_WHITE
     }
 })
