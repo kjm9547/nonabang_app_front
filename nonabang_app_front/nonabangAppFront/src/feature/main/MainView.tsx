@@ -9,16 +9,16 @@ import { MainBodybottom } from "./MainBodyBottom"
 
 export const MainView = () => {
     const navigation = useNavigation<any>()
-    const keyword = ["룸메찾기", "방 등록", "찜한 방", "커뮤니티"]
+    const keyword = ["룸메찾기", "내방등록", "찜한 방", "커뮤니티"]
     const iconKeyword = []
     const onPressCard = (text: string) => {
         if (text == "룸메찾기") {
             console.log(1)
             navigation.navigate('MainStack', { screen: 'SearchMate' })
         }
-        else if (text == "방 등록") {
+        else if (text == "내방등록") {
             console.log(2)
-            // navigation.navigate("AddRoomPage")
+            navigation.navigate('MainStack', { screen: 'Regist' })
         }
         else if (text == "찜한 방") {
             console.log(3)

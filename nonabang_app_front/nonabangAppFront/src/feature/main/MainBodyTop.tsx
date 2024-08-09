@@ -44,7 +44,7 @@ export const MainBodyTop = ({onPressCard}:any) => {
         return (
             <TouchableOpacity 
                 style={styles.touchableCard}
-                onPress={()=>{onPressCard("룸메찾기")}}
+                onPress={()=>{onPressCard(title)}}
                 >
                <BackView text={title}/>
                     <Text style={{top:150,fontSize:18,fontWeight:"bold"}}>{title}</Text>
