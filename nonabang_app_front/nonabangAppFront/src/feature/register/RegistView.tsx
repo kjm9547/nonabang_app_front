@@ -4,8 +4,7 @@ import Icon from "react-native-vector-icons/MaterialIcons"
 import { COLOR } from "../../colors/colors"
 import { useNavigation } from "@react-navigation/native"
 import { useRegister } from "../../hooks/useRegister"
-import { useEffect, useState } from "react"
-import { RegisterAddressView } from "./RegisterAddressView"
+
 
 export const ResistView = () => {
     const data = ["원룸", "오피스텔", "주택", "아파트"]
@@ -19,9 +18,9 @@ export const ResistView = () => {
         navigation.navigate("Register",{screen:"RegisterAddress"})
     }
     return (    
-                 <SafeAreaView>
+                 <SafeAreaView style={{backgroundColor:COLOR.BACKGROUND_DEFAULT}}>
                 <BackArrowHeader title="등록하기" />
-                <View style={{ width: 360, alignSelf: "center", paddingLeft: 10, paddingTop: 30 }}>
+                <View style={{ width: 360, alignSelf: "center", paddingLeft: 10, paddingTop: 30 ,backgroundColor:COLOR.BACKGROUND_DEFAULT}}>
                     <Text style={{ fontSize: 20, fontWeight: "bold" }}>어떤 방을 찾으세요?</Text>
                 </View>
                 <FlatList
@@ -44,6 +43,7 @@ export const ResistView = () => {
                         </View>
                     )}
                 />
+                <View style={{height:180}}/>
             </SafeAreaView>
     )
 }
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         borderColor: COLOR.BORDERSHADOW_BLACKLIGHT,
-        backgroundColor: COLOR.CARDBACKGROUND_WHITE
+        backgroundColor: COLOR.BACKGROUND_WHITE_DOWN
     },
     cardBackground: {
         borderRadius: 25,

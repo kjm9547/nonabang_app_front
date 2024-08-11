@@ -75,6 +75,6 @@ const styles = StyleSheet.create({
         marginRight: 10,
         height: "80%",
         alignItems:"center",
-        backgroundColor:COLOR.CARDBACKGROUND_WHITE
+        backgroundColor:COLOR.BACKGROUND_WHITE_DOWN
     }
 })

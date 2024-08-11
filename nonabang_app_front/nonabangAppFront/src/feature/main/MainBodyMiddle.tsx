@@ -20,7 +20,7 @@ export const MainBodyMiddle = () => {
                     data={data}
                     renderItem={({item,index})=>(
                             <><View style={styles.listItem}>
-                                <Icon name={icon[index]} size={22} color={COLOR.MAIN_ORANGE}/>
+                                <Icon name={icon[index]} size={28} color={COLOR.MAIN_ORANGE}/>
                             </View>
                             <View style={{alignItems:"center",marginLeft:10,marginTop:8}}>
                             <Text style={{fontWeight:600,}}>{item}</Text>
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
         borderColor:COLOR.BORDERSHADOW_BLACKLIGHT,
         height:"80%",
         borderRadius:20,
-        backgroundColor:COLOR.CARDBACKGROUND_WHITE
+        backgroundColor:COLOR.BACKGROUND_WHITE_DOWN
     },
     listContainer:{
         flexDirection:"row",alignItems:"center",justifyContent:"center",flex:0.8,width:'100%'

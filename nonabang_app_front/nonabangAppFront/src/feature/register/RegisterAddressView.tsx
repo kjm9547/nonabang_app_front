@@ -1,28 +1,31 @@
-import { Pressable, SafeAreaView, StyleSheet, TextInput, View } from "react-native"
+import { Pressable, SafeAreaView, StyleSheet, Text, TextInput, View } from "react-native"
 import { BackArrowHeader } from "../../components/BackArrowHeader"
 import Postcode,{} from '@actbase/react-daum-postcode';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
+import { useState } from "react";
+import { COLOR } from "../../colors/colors";
+import { useNavigation } from "@react-navigation/native";
 export const RegisterAddressView = () => {
+   const navigation = useNavigation<any>()
 
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <BackArrowHeader title="주소검색" />
             <GooglePlacesAutocomplete
             fetchDetails={true}
-      placeholder='Search'
+      placeholder='주소를 검색해주세요. 예) 부산 광역시 수영구'
       onPress={(data, details = null) => {
         // 'details' is provided when fetchDetails = true
         console.log(data, details);
-        console.log("???");
+        navigation.navigate("RegisterDetail")
       }}
-      styles={{textInput:{borderWidth:1},container:{borderWidth:1}}}
+      styles={{textInput:{borderBottomWidth:1,borderBottomColor:COLOR.BORDERSHADOW_BLACKLIGHT},}}
       query={{
         key: 'AIzaSyCjQsMWoaI1dEMf_Glzr1r_P21GllNa3hM',
         language: 'ko',
         components:"country:kr"
       }}
     />
-
         </SafeAreaView>
     )
 }
@@ -35,5 +38,5 @@ const styles = StyleSheet.create({
     },
     inputbox:{
         borderWidth:1
-    }
+    },
 })

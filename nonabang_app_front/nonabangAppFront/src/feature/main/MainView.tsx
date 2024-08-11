@@ -31,7 +31,7 @@ export const MainView = () => {
     }
     const MainHeader = () => {
         return (
-            <View style={{ flex:1,flexDirection:"row",backgroundColor:"" ,}}>
+            <View style={{ flex:1,flexDirection:"row"}}>
                 <View style={{flex:0.8,paddingHorizontal:15,justifyContent:"center"}}>
                 <Text style={{ fontSize: 18,fontWeight:600 }}>광안동 1075-16</Text>
                 </View>
@@ -42,7 +42,7 @@ export const MainView = () => {
         )
     }
     return (
-        <SafeAreaView style={{ flex: 1 }}>
+        <SafeAreaView style={{ flex: 1 ,backgroundColor:COLOR.BACKGROUND_DEFAULT}}>
             <View style={{ flex: 1, }}>
                 <View style={{flex:0.06}}>
                 <MainHeader />
