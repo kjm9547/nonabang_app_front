@@ -1,15 +1,21 @@
-import { Text, View } from "react-native"
+import { Text, TouchableOpacity, View } from "react-native"
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import { COLOR } from "../colors/colors"
-export const BackArrowHeader = ({title}:any) => {
+import { useNavigation } from "@react-navigation/native"
+type props = {
+    title:string
+}
+export const BackArrowHeader = ({title}:props) => {
+    const navigation = useNavigation<any>();
     return(
-        <View style={{flexDirection:"row",
+        <TouchableOpacity style={{flexDirection:"row",
         alignItems:"center",
         height:35,
         borderBottomWidth:0.6,
         borderColor:COLOR.BORDERSHADOW_BLACKLIGHT,
-        
-        }}>
+        }}
+        onPress={()=>{navigation.pop()}}
+        >
             <Icon name = "arrow-back-ios" size={16} style={{left:5,position:"absolute"}}/>
             <View style={{width:"100%"}}>
                 <Text style={{textAlign:"center",fontSize:16}}>
@@ -19,6 +25,6 @@ export const BackArrowHeader = ({title}:any) => {
             
             
             
-        </View>
+        </TouchableOpacity>
     )
 }

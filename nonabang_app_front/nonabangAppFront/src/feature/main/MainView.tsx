@@ -18,7 +18,7 @@ export const MainView = () => {
         }
         else if (text == "내방등록") {
             console.log(2)
-            navigation.navigate('MainStack', { screen: 'Regist' })
+            navigation.navigate('Register', { screen: 'RegisterMain' })
         }
         else if (text == "찜한 방") {
             console.log(3)
@@ -48,15 +48,15 @@ export const MainView = () => {
                 <MainHeader />
                 </View>
                 <View style={{flex:0.94,}}>
-                    <View style={{flex:0.4,}}>
+                    <View style={{flex:0.4}}>
                         {/* body top */}
                         <MainBodyTop onPressCard={onPressCard}/>
                     </View>
-                    <View style={{flex:0.3}}>
+                    <View style={{flex:0.33}}>
                         {/* body middle */}
                         <MainBodyMiddle/>
                     </View>
-                    <View style={{flex:0.3}}>
+                    <View style={{flex:0.32}}>
                         {/* body bottom */}
                         <MainBodybottom/>
                     </View>

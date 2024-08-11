@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     container:{
         flex:1,
         flexDirection:'row',
-        
+        paddingTop:20
     },
     card:{
         flex:0.5,

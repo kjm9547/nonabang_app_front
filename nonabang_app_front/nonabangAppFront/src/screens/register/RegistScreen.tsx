@@ -1,6 +1,6 @@
 import { ResistView } from "../../feature/register/RegistView"
 
-export const ResistScreen = () => {
+export const ResisterScreen = () => {
     return(
         <ResistView/>
     )

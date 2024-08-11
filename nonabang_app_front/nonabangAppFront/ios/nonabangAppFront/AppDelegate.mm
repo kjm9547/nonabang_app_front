@@ -3,10 +3,13 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 #import <GoogleSignIn/GoogleSignIn.h>
+#import <GoogleMaps/GoogleMaps.h>
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  [GMSServices provideAPIKey:@"AIzaSyCjQsMWoaI1dEMf_Glzr1r_P21GllNa3hM"];
   self.moduleName = @"nonabangAppFront";
   self.initialProps = @{};
 
