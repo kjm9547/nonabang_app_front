@@ -5,9 +5,10 @@ import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplet
 import { useState } from "react";
 import { COLOR } from "../../colors/colors";
 import { useNavigation } from "@react-navigation/native";
+import { useRegister } from "../../hooks/useRegister";
 export const RegisterAddressView = () => {
    const navigation = useNavigation<any>()
-
+    const {setAddress} = useRegister()
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <BackArrowHeader title="주소검색" />
@@ -16,6 +17,7 @@ export const RegisterAddressView = () => {
       placeholder='주소를 검색해주세요. 예) 부산 광역시 수영구'
       onPress={(data, details = null) => {
         // 'details' is provided when fetchDetails = true
+        setAddress(data.description)
         console.log(data, details);
         navigation.navigate("RegisterDetail")
       }}

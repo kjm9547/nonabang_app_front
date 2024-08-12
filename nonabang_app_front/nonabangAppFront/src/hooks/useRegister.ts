@@ -1,15 +1,23 @@
 const data ={
     type:'',
+    address:''
 }
 export const useRegister = () => {
-    const setRoomType = (type:string) =>{
+    const setRoomtype = (type:string) =>{
         data.type = type;
     }
-    const getRoomType = (type:string) => {
+    const getRoomtype = (type:string) => {
         
     }
+    const setAddress = (type:string) =>{
+        data.address = type;
+    }
+    const getAddress = () => {
+       return data.address 
+    }
     return{
-        setRoomType,
-
+        setRoomtype,
+        setAddress,
+        getAddress
     }
 }

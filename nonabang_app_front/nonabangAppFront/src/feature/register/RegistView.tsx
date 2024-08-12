@@ -11,10 +11,10 @@ export const ResistView = () => {
     const icon = ["house", "location-city", "home-work", "apartment"]
     const navigation = useNavigation<any>()
     const {
-        setRoomType
+        setRoomtype
     } = useRegister()
     const onPressItemPress = ({ item }: any) => {
-        setRoomType(item)
+        setRoomtype(item)
         navigation.navigate("Register",{screen:"RegisterAddress"})
     }
     return (    
