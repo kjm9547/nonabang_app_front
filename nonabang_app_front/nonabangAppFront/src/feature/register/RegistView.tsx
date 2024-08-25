@@ -43,7 +43,8 @@ export const ResistView = () => {
                         </View>
                     )}
                 />
-                <View style={{height:180}}/>
+                <View style={{height:180}}>
+                </View>
             </SafeAreaView>
     )
 }
